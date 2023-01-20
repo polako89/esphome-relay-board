@@ -1,23 +1,22 @@
 substitutions:
   devicename: painel-01
   friendly_name: Painel-01
-  switch1: Estoque 2
-  switch2: Caixa
-  switch3: Estoque 1
-  switch4: Garagem
-  switch5: Frente Escritorio
-  switch6: Atendimento 1
-  switch7: Entrada Garagem
-  switch8: Atendimento 2
-  switch9: Escritório 2
-  switch10: Escritório 3
-  switch11: Estoque 3
-  switch12: Banheiro
-  switch13: Sala Arquivo
-  switch14: Cozinha
-  switch15: Sala Rosmar
-  switch16: Escritorio 1
-
+  switch1: Relay1
+  switch2: Relay2
+  switch3: Relay3
+  switch4: Relay4
+  switch5: Relay5
+  switch6: Relay6
+  switch7: Relay7
+  switch8: Relay8
+  switch9: Relay9
+  switch10: Relay10
+  switch11: Relay11
+  switch12: Relay12
+  switch13: Relay13
+  switch14: Relay14
+  switch15: Relay15
+  switch16: Relay16
 
 ###### CONFIG ######
   delay: 0ms
@@ -433,12 +432,12 @@ binary_sensor:
         input: true
         pullup: true
       inverted: false
-#    on_press:
-#      then:
-#        - light.toggle: light_4
-#    on_release:
-#      then:
-#        - light.toggle: light_4
+    on_press:
+      then:
+        - light.toggle: light_4
+    on_release:
+      then:
+        - light.toggle: light_4
         
 ### Tecla switch relay 8 ###
   - platform: gpio
@@ -834,12 +833,12 @@ binary_sensor:
         input: true
         pullup: true
       inverted: false
-#    on_press:
-#      then:
-#        - light.toggle: light_10
-#    on_release:
-#      then:
-#        - light.toggle: light_10
+    on_press:
+      then:
+        - light.toggle: light_10
+    on_release:
+      then:
+        - light.toggle: light_10
         
 ### Tecla switch relay 29 ###
   - platform: gpio
